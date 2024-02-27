@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TicketManagement.Domain.Common;
+using TicketManagement.Domain.Entities;
 
 namespace GloboTicket.TicketManagement.Persistence
 {

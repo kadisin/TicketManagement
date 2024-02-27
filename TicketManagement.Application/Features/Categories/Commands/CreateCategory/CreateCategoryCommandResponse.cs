@@ -1,4 +1,4 @@
-﻿using GloboTicket.TicketManagement.Application.Responses;
+﻿using TicketManagement.Application.Responses;
 
 namespace GloboTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry
 {

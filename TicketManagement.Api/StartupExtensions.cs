@@ -3,6 +3,7 @@ using TicketManagement.Infrastructure;
 using TicketManagement.Persistence;
 using Microsoft.EntityFrameworkCore;
 using GloboTicket.TicketManagement.Persistence;
+using TicketManagement.Api.Middleware;
 
 namespace TicketManagement.Api
 {
@@ -39,6 +40,8 @@ namespace TicketManagement.Api
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCustomExceptionHandler();
 
             app.UseHttpsRedirection();
             app.MapControllers();

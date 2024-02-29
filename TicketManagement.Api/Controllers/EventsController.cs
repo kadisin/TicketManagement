@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TicketManagement.Api.Utility;
 using TicketManagement.Application.Features.Events.Commands.CreateEvent;
 using TicketManagement.Application.Features.Events.Commands.DeleteEvent;
 using TicketManagement.Application.Features.Events.Commands.UpdateEvent;
 using TicketManagement.Application.Features.Events.Queries.GetEventDetail;
+using TicketManagement.Application.Features.Events.Queries.GetEventsExport;
 using TicketManagement.Application.Features.Events.Queries.GetEventsList;
 
 namespace TicketManagement.Api.Controllers
@@ -61,6 +63,14 @@ namespace TicketManagement.Api.Controllers
             var deleteEventCommand = new DeleteEventCommand() { EventId = id };
             await _mediator.Send(deleteEventCommand);
             return NoContent();
+        }
+
+        [HttpGet("export", Name = "ExportEvents")]
+        [FileResultContentType("text/csv")]
+        public async Task<FileResult> ExportEvents()
+        {
+            var fileDto = await _mediator.Send(new GetEventsExportQuery());
+            return File(fileDto.Data, fileDto.ContentType, fileDto.EventExportFileName);
         }
     }
 }

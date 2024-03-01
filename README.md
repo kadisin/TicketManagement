@@ -18,7 +18,9 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
     
 <hr>
 <h3>Project Information</h3>
-<li></li>
+<li>Application created to learn good backend practises</li>
+<li>Application use .NET Framework, Entity Framework, Mappers, CQRS Architecture, Communication using mediator</li>
+<li>Using logger and anthentication using token</li>
 <hr>
     
 <hr>
@@ -55,7 +57,5 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/c49575a2-c634-431d-84c1-8e6e6f156a2e)
 
-
-<p>Scalable application using CQRS and mediator (MediatR) patterns</p>
 </body>
 </html>

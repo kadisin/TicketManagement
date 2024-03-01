@@ -82,5 +82,13 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/c63b1080-a9f1-4b8f-ba00-87c64a5934f4)
 
+<p>Logging important steps in application</p>
+<p>Save logs to files</p>
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/796ecb72-e244-4007-905a-f2220d968678)
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/d8464feb-bb91-42b4-a1ee-3df2eab10a33)
+
+
 </body>
 </html>

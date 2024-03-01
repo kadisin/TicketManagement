@@ -59,7 +59,7 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/c49575a2-c634-431d-84c1-8e6e6f156a2e)
 
 <hr>
-<h3><Dependecy Injection</h3>
+<h3>Dependecy Injection</h3>
 <p />
 <p>If needed project have registered services</p>
 

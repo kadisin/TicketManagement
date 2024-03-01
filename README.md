@@ -53,7 +53,7 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/53442001-0784-4a7e-b9d2-eabd872bf016)
 
-<p> Validation added if necessary <p>
+<p> Validation added if necessary (fluent valdation)<p>
 
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/1a3bc40e-7813-4766-b76a-4e154d04e0bb)
 

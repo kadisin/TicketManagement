@@ -4,6 +4,13 @@ using TicketManagement.Persistence;
 using Microsoft.EntityFrameworkCore;
 using GloboTicket.TicketManagement.Persistence;
 using TicketManagement.Api.Middleware;
+using Microsoft.AspNetCore.Builder;
+using TicketManagement.Identity;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
+using TicketManagement.Identity.Models;
+using TicketManagement.Application.Contracts;
+using TicketManagement.Api.Services;
 
 namespace TicketManagement.Api
 {
@@ -14,6 +21,11 @@ namespace TicketManagement.Api
             builder.Services.AddApplicationServices();
             builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddPersistenceServices(builder.Configuration);
+            builder.Services.AddIdentityServices(builder.Configuration);
+
+            builder.Services.AddScoped<IloggedInUserService, LoggedInUserService>();
+
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddControllers();
 
@@ -26,6 +38,7 @@ namespace TicketManagement.Api
                     .AllowAnyHeader()
                     .AllowCredentials()));
 
+            builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             return builder.Build();
@@ -33,6 +46,14 @@ namespace TicketManagement.Api
 
         public static WebApplication ConfigurePipeline(this WebApplication app)
         {
+            app.MapIdentityApi<ApplicationUser>();
+
+            app.MapPost("/Logout", async (ClaimsPrincipal user, SignInManager<ApplicationUser> signInManager) =>
+            {
+                await signInManager.SignOutAsync();
+                return TypedResults.Ok();
+            });
+            
             app.UseCors("open");
 
             if(app.Environment.IsDevelopment())

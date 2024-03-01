@@ -24,3 +24,5 @@ app.UseSerilogRequestLogging();
 await app.ResetDatabaseAsync();
 
 app.Run();
+
+public partial class Program { }

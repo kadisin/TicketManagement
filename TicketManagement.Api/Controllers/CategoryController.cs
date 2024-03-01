@@ -1,5 +1,6 @@
 ﻿using GloboTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicketManagement.Application.Features.Categories.Queries.GetCategoriesList;
 using TicketManagement.Application.Features.Categories.Queries.GetCategoriesListWithEvents;
@@ -19,6 +20,7 @@ namespace TicketManagement.Api.Controllers
 
         [HttpGet("all", Name = "GetAllCategories")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        //[Authorize]
         public async Task<ActionResult<List<CategoryListVm>>> GetAllCategories()
         {
             var dtos = await _mediator.Send(new GetCategoriesListQuery());
@@ -28,6 +30,7 @@ namespace TicketManagement.Api.Controllers
         [HttpGet("allwithevents", Name = "GetCategoriesWithEvents")]
         [ProducesDefaultResponseType]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        //[Authorize]
         public async Task<ActionResult<List<CategoryEventListVm>>> GetCategoriesWithEvents(bool includeHistory)
         {
             GetCategoriesListWithEventsQuery getCategoriesListWithEventsQuery = new GetCategoriesListWithEventsQuery() { IncludeHistory = includeHistory };
@@ -36,6 +39,7 @@ namespace TicketManagement.Api.Controllers
         }
 
         [HttpPost(Name = "AddCategory")]
+        //[Authorize]
         public async Task<ActionResult<CreateCategoryCommandResponse>> Create([FromBody] CreateCategoryCommand createCategoryCommand)
         {
             var response = await _mediator.Send(createCategoryCommand);

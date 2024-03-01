@@ -14,6 +14,7 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 <li>About project</li>
 <li>Application architecture</li>
 <li>CQRS and Mediator patterns</li>
+<li>Dependency Injection</li>
 <li>Logging</li>
     
 <hr>
@@ -56,6 +57,21 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/1a3bc40e-7813-4766-b76a-4e154d04e0bb)
 
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/c49575a2-c634-431d-84c1-8e6e6f156a2e)
+
+<hr>
+<h3><Dependecy Injection</h3>
+<p />
+<p>If needed project have registered services</p>
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/22582254-efa7-49a7-8d88-e6645076f886)
+
+<p>Api project manage all registered services</p>
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/bcb94b75-3b03-46b7-b431-f014c4967283)
+
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/8b61a4de-7d76-4fec-9832-3dc9ef9d4493)
+
 
 </body>
 </html>

@@ -15,13 +15,12 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 <li>Application architecture</li>
 <li>CQRS and Mediator patterns</li>
 <li>Dependency Injection</li>
-<li>Logging</li>
     
 <hr>
 <h3>Project Information</h3>
 <li>Application created to learn good backend practises</li>
 <li>Application use .NET Framework, Entity Framework, Mappers, CQRS Architecture, Communication mediator</li>
-<li>Logging and authentication token</li>
+<li>Dependency injection</li>
 <hr>
     
 <hr>

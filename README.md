@@ -75,8 +75,12 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 
 <hr>
 <h3>Exception handling and logging</h3>
-<p>Text</p>
+<p>Exception is thrown into Exception handler middleware</p>
+<p>Plugged into pipeline</p>
 
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/ec595c8a-4d65-4450-b4a8-5a3f76cb4fdb)
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/c63b1080-a9f1-4b8f-ba00-87c64a5934f4)
 
 </body>
 </html>

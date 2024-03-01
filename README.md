@@ -13,8 +13,7 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 <h3>Paragraphs</h3>
 <li>About project</li>
 <li>Application architecture</li>
-<li>CQRS</li>
-<li>MediatR pattern</li>
+<li>CQRS and Mediator patterns</li>
 <li>Logging</li>
     
 <hr>
@@ -30,7 +29,7 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/69bbdba2-1b92-44fc-923e-579ad625fb59)
 
 <p />
-<h3>CQRS - Command Query Resposibility Separation</h3>
+<h3>CQRS - Command Query Resposibility Separation and mediator pattern</h3>
 <p>Pattern used to separate query - read and command - add, update, delete operations</p>
 <p>Event separation</p>
 
@@ -49,6 +48,12 @@ Dependency injection, architecture app, cqrs, entity framework, logging, authent
 <p> Controller create request and call it to handler <p>
 
 ![image](https://github.com/kadisin/TicketManagement/assets/38622355/53442001-0784-4a7e-b9d2-eabd872bf016)
+
+<p> Validation added if necessary <p>
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/1a3bc40e-7813-4766-b76a-4e154d04e0bb)
+
+![image](https://github.com/kadisin/TicketManagement/assets/38622355/c49575a2-c634-431d-84c1-8e6e6f156a2e)
 
 
 <p>Scalable application using CQRS and mediator (MediatR) patterns</p>
